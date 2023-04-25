@@ -10,7 +10,7 @@ class AddColumnToPorts extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::table('ports', function (Blueprint $table) {
             $table->bigInteger('ifSpeed_prev')->nullable()->after('ifSpeed');
@@ -23,7 +23,7 @@ class AddColumnToPorts extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::table('ports', function (Blueprint $table) {
             $table->dropColumn(['ifSpeed_prev', 'ifHighSpeed_prev']);

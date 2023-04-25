@@ -11,7 +11,7 @@ class AlterMetricColumn extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::table('application_metrics', function (Blueprint $table) {
             $table->string('metric', 64)->change();
@@ -23,7 +23,7 @@ class AlterMetricColumn extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::table('application_metrics', function (Blueprint $table) {
             $table->string('metric', 32)->change();

@@ -17,7 +17,7 @@ class AddPrimaryKeyPortsPerms extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         if (! Schema::hasColumn('ports_perms', 'id')) {
             Schema::table('ports_perms', function (Blueprint $table) {
@@ -31,7 +31,7 @@ class AddPrimaryKeyPortsPerms extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
     }
 }

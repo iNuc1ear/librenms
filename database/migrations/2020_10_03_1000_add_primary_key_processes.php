@@ -17,7 +17,7 @@ class AddPrimaryKeyProcesses extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         if (! Schema::hasColumn('processes', 'id')) {
             Schema::table('processes', function (Blueprint $table) {
@@ -31,7 +31,7 @@ class AddPrimaryKeyProcesses extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
     }
 }

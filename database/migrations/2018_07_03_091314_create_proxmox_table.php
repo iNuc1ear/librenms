@@ -10,7 +10,7 @@ class CreateProxmoxTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('proxmox', function (Blueprint $table) {
             $table->increments('id');
@@ -28,7 +28,7 @@ class CreateProxmoxTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::drop('proxmox');
     }

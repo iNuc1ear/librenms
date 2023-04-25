@@ -10,7 +10,7 @@ class CreateBgpPeersTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('bgpPeers', function (Blueprint $table) {
             $table->increments('bgpPeer_id');
@@ -39,7 +39,7 @@ class CreateBgpPeersTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::drop('bgpPeers');
     }

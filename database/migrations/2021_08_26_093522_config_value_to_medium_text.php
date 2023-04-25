@@ -11,7 +11,7 @@ class ConfigValueToMediumText extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::table('config', function (Blueprint $table) {
             $table->mediumText('config_value')->change();
@@ -23,7 +23,7 @@ class ConfigValueToMediumText extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::table('config', function (Blueprint $table) {
             $table->string('config_value', 512)->change();

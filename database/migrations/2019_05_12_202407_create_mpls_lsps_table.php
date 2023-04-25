@@ -11,7 +11,7 @@ class CreateMplsLspsTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('mpls_lsps', function (Blueprint $table) {
             $table->increments('lsp_id');
@@ -44,7 +44,7 @@ class CreateMplsLspsTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('mpls_lsps');
     }

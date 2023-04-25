@@ -11,7 +11,7 @@ class AlterDevicesSnmpAlgoColumns extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::table('devices', function (Blueprint $table) {
             $table->string('authalgo', 10)->nullable()->change();
@@ -24,7 +24,7 @@ class AlterDevicesSnmpAlgoColumns extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
     }
 }

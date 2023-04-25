@@ -10,7 +10,7 @@ class CreateServiceTemplatesTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('service_templates', function (Blueprint $table) {
             $table->increments('id');
@@ -40,7 +40,7 @@ class CreateServiceTemplatesTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::drop('service_templates');
     }

@@ -10,7 +10,7 @@ class CreateDevicePerfTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('device_perf', function (Blueprint $table) {
             $table->increments('id');
@@ -31,7 +31,7 @@ class CreateDevicePerfTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::drop('device_perf');
     }

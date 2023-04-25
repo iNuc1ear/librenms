@@ -9,7 +9,7 @@ class FixInvalidDates extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         if (\LibreNMS\DB\Eloquent::getDriver() != 'mysql') {
             return;
@@ -39,7 +39,7 @@ class FixInvalidDates extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         //
     }

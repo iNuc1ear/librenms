@@ -11,7 +11,7 @@ class PluginsAddVersionAndSettings extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::table('plugins', function (Blueprint $table) {
             $table->integer('version')->default(1);
@@ -24,7 +24,7 @@ class PluginsAddVersionAndSettings extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::table('plugins', function (Blueprint $table) {
             $table->dropColumn(['version', 'settings']);
